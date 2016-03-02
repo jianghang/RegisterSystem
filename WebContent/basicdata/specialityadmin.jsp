@@ -21,6 +21,8 @@
 		String specialityid = request.getParameter("specialityid");
 
 		if (specialityname != null && !specialityname.equals("")) {
+			specialityname = new String(specialityname.getBytes("ISO-8859-1"),"UTF-8");
+			System.out.println("specialityname:" + specialityname);
 			if ("add".equals(action)) {
 				String sql = "select * from speciality where SpecialityName=?";
 				PreparedStatement psSelect = conn.prepareStatement(sql);
@@ -45,9 +47,9 @@
 			}
 		}
 	%>
-	<form action="specialityadmin.jsp" action="post">
+	<form action="specialityadmin.jsp" method="post">
 		<table border="1" cellpadding="0" cellspacing="0"
-			style="border-collapse: collapse;" bordercolor="#C0C0C0" width="600">
+			style="border-collapse: collapse;" bordercolor="#C0C0C0" width="800">
 			<tr align="center">
 				<td width="100%" bgcolor="#c0c0c0"><font color="#0000ff">录入专业数据</font>
 				</td>
@@ -62,7 +64,7 @@
 	</form>
 
 	<table border="1" cellpadding="0" cellspacing="0"
-		style="border-collapse: collapse;" bordercolor="#c0c0c0" width="600px">
+		style="border-collapse: collapse;" bordercolor="#c0c0c0" width="800px">
 		<tr>
 			<td width="100%" bgcolor="#c0c0c0" align="center" colspan="3"><font
 				color="#0000ff">已有专业数据</font></td>

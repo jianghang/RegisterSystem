@@ -7,7 +7,7 @@
 <title>报道管理系统</title>
 <style type="text/css">
 	div#container{
-		width: 1000px;
+		width: 1200px;
 		margin: 0 auto;
 	}
 	div#header{
@@ -21,7 +21,7 @@
 		float: left;
 	}
 	div#content{
-		width:700px;
+		width:900px;
 		height：800px;
 		float: left;
 	}
@@ -43,7 +43,7 @@
 	<div id="container">
 		<div id="header"><iframe width="800px" height="80px" src="banner.html" frameborder="0" border="0"></iframe></div>
 		<div id="menu"><iframe target="main" width="300px" height="800px" marginheight="0" src="left.jsp" frameborder="0"></iframe></div>
-		<div id="content"><iframe name="main" width="700px" height="800px" marginheight="0" src="basicdata/regstatus.jsp" frameborder="0"></iframe></div>
+		<div id="content"><iframe name="main" width="900px" height="800px" marginheight="0" src="basicdata/regstatus.jsp" frameborder="0"></iframe></div>
 	</div>
 </body>
 </html>
